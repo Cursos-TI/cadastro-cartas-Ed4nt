@@ -1,4 +1,6 @@
 #include <stdio.h>
+#include <stdbool.h>
+
 
 // Desafio Super Trunfo - Países
 // Tema 1 - Cadastro das cartas
@@ -52,8 +54,11 @@ int main() {
 
   // calculo de variáveis
 
-  densidadePopulacional1 = (float) populacao1 / area1;
-  pibPerCapta1 = (float) pib1 / populacao1;
+  float densidadePopulacional1 = (float) populacao1 / area1;
+
+  float pibPerCapta1 = (float) pib1 / populacao1;
+
+  float super1 = (float) populacao1 + area1 + pib1 + qtPontosTuristicos1 + pibPerCapta1 + (1/densidadePopulacional1);
 
   // Área para exibição dos dados da carta 1
 
@@ -67,7 +72,7 @@ int main() {
   printf("Pontos Turisticos: %d\n", qtPontosTuristicos1);
   printf("Densidade Populacional: %.2f\n", densidadePopulacional1);
   printf("PIB per Capta: %.2f\n", pibPerCapta1);
-
+  printf("Super Poder: %.2f\n", super1);
 
 
   // Área para entrada de dados da carta 2
@@ -96,8 +101,11 @@ int main() {
 
 
   // área de calculo de variáveis
-  densidadePopulacional2 = (float) populacao2 / area2;
-  pibPerCapta2 = (float) pib2 / populacao2;
+  float densidadePopulacional2 = (float) populacao2 / area2;
+  
+  float pibPerCapta2 = (float) pib2 / populacao2;
+
+  float super2 = (float) populacao2 + area2 + pib2 + qtPontosTuristicos2 + pibPerCapta2 + (1/densidadePopulacional2);
 
   // Área para exibição dos dados da carta 2
 
@@ -111,6 +119,27 @@ int main() {
   printf("Pontos Turisticos: %d\n", qtPontosTuristicos2);
   printf("Densidade Populacional: %.2f\n", densidadePopulacional2);
   printf("PIB per Capta: %.2f\n", pibPerCapta2);
+  printf("Super Poder: %.2f\n", super2);
+
+
+  // comparação de cartas
+  bool resultadoPopulacao = populacao1 > populacao2;
+  bool resultadoArea = area1 > area2;
+  bool resultadoPib = pib1 > pib2;
+  bool resultadoQtPontosTuristicos = qtPontosTuristicos1 > qtPontosTuristicos2;
+  bool resultadoDensidadePopulacional = densidadePopulacional1 < densidadePopulacional2;
+  bool resultadoPibPerCapta = pibPerCapta1 > pibPerCapta2;
+  bool resultadoSuper = super1 > super2;
+
+  // exibição do resultado da comparação
+  printf("\n--- CARTA 1 VS CARTA 2 ---\n");
+  printf("População: Carta 1 venceu (%d)\n", resultadoPopulacao);
+  printf("Área: Carta 1 venceu (%d)\n", resultadoArea);
+  printf("PIB: Carta 1 venceu (%d)\n", resultadoPib);
+  printf("Pontos Turísticos: Carta 1 venceu (%d)\n", resultadoQtPontosTuristicos);
+  printf("Densidade Populacional: Carta 1 venceu (%d)\n", resultadoDensidadePopulacional);
+  printf("PIB per Capta: Carta 1 venceu (%d)\n", resultadoPibPerCapta);
+  printf("Super Poder: Carta 1 venceu (%d)\n", resultadoSuper);
 
 return 0;
 }

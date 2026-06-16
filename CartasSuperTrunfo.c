@@ -16,8 +16,6 @@ int main() {
   float area1;
   float pib1;
   int qtPontosTuristicos1;
-  float densidadePopulacional1;
-  float pibPerCapta1;
 
   char estado2[20];
   char codigo2[5];
@@ -26,19 +24,17 @@ int main() {
   float area2;
   float pib2;
   int qtPontosTuristicos2;
-  float densidadePopulacional2;
-  float pibPerCapta2;
 
   // Área para entrada de dados da carta 1
   /*----------- Dados Carta 1 -------------*/
   printf("Nome do estado:\n");
-  scanf(" %[^\n]s", &estado1);
+  scanf(" %[^\n]s", estado1);
 
   printf("Codigo:\n");
-  scanf(" %s", &codigo1);
+  scanf(" %s", codigo1);
 
   printf("Nome da Cidade:\n");
-  scanf(" %[^\n]s", &nomeCidade1);
+  scanf(" %[^\n]s", nomeCidade1);
 
   printf("Populacao:\n");
   scanf(" %d", &populacao1);
@@ -79,13 +75,13 @@ int main() {
   /*----------- Dados Carta 2 -------------*/
 
    printf("Nome do estado:\n");
-  scanf(" %[^\n]s", &estado2);
+  scanf(" %[^\n]s", estado2);
 
   printf("Codigo:\n");
-  scanf(" %s", &codigo2);
+  scanf(" %s", codigo2);
 
   printf("Nome da Cidade:\n");
-  scanf(" %[^\n]s", &nomeCidade2);
+  scanf(" %[^\n]s", nomeCidade2);
 
   printf("Populacao:\n");
   scanf(" %d", &populacao2);

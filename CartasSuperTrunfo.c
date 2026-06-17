@@ -9,6 +9,7 @@
 
 int main() {
   // Área para definição das variáveis para armazenar as propriedades das cidades
+  /*
   char estado1[20];
   char codigo1[5];
   char nomeCidade1[20];
@@ -24,9 +25,27 @@ int main() {
   float area2;
   float pib2;
   int qtPontosTuristicos2;
+  */
+  /*-- AREA DE DADOS PREENCHIDOS COMENTE PARA TESTAR --*/
+  char estado1[20] = "São Paulo";
+  char codigo1[5] = "A01";
+  char nomeCidade1[20] = "São Paulo";
+  int populacao1 = 12325000;
+  float area1 = 1521.11;
+  long double pib1 = 699280000000;
+  int qtPontosTuristicos1 = 50;
+
+  char estado2[20] = "RIO DE JANEIRO";
+  char codigo2[5] = "B02";
+  char nomeCidade2[20] = "RIO DE JANEIRO";
+  int populacao2 = 6748000;
+  float area2 = 1200.25;
+  long double pib2 = 300500000000;
+  int qtPontosTuristicos2 = 30;
 
   // Área para entrada de dados da carta 1
   /*----------- Dados Carta 1 -------------*/
+  /*
   printf("Nome do estado:\n");
   scanf(" %[^\n]s", estado1);
 
@@ -47,6 +66,7 @@ int main() {
 
   printf("Quantidade de pontos turisticos:\n");
   scanf(" %d", &qtPontosTuristicos1);
+  */
 
   // calculo de variáveis
 
@@ -73,8 +93,8 @@ int main() {
 
   // Área para entrada de dados da carta 2
   /*----------- Dados Carta 2 -------------*/
-
-   printf("Nome do estado:\n");
+  /*
+  printf("Nome do estado:\n");
   scanf(" %[^\n]s", estado2);
 
   printf("Codigo:\n");
@@ -94,7 +114,7 @@ int main() {
 
   printf("Quantidade de pontos turisticos:\n");
   scanf(" %d", &qtPontosTuristicos2);
-
+  */
 
   // área de calculo de variáveis
   float densidadePopulacional2 = (float) populacao2 / area2;
@@ -111,7 +131,7 @@ int main() {
   printf("Cidade: %s\n", nomeCidade2);
   printf("Populacao: %d\n", populacao2);
   printf("Area: %.2f\n", area2);
-  printf("PIB: %.2f\n", pib2);
+  printf("PIB: %.2lf\n", pib2);
   printf("Pontos Turisticos: %d\n", qtPontosTuristicos2);
   printf("Densidade Populacional: %.2f\n", densidadePopulacional2);
   printf("PIB per Capta: %.2f\n", pibPerCapta2);
@@ -119,6 +139,7 @@ int main() {
 
 
   // comparação de cartas
+  /*
   bool resultadoPopulacao = populacao1 > populacao2;
   bool resultadoArea = area1 > area2;
   bool resultadoPib = pib1 > pib2;
@@ -126,8 +147,17 @@ int main() {
   bool resultadoDensidadePopulacional = densidadePopulacional1 < densidadePopulacional2;
   bool resultadoPibPerCapta = pibPerCapta1 > pibPerCapta2;
   bool resultadoSuper = super1 > super2;
+  */
 
   // exibição do resultado da comparação
+  printf("\n--- CARTA 1 VS CARTA 2 ---\n");
+  if (populacao1 > populacao2) {
+    printf("Carta 1 - %s: %d\n", nomeCidade1, populacao1);
+    printf("Carta 2 - %s: %d\n", nomeCidade2, populacao2);
+    printf("Resultado: Carta 1 %s venceu\n", nomeCidade1);
+  }
+
+  /*
   printf("\n--- CARTA 1 VS CARTA 2 ---\n");
   printf("População: Carta 1 venceu (%d)\n", resultadoPopulacao);
   printf("Área: Carta 1 venceu (%d)\n", resultadoArea);
@@ -136,6 +166,6 @@ int main() {
   printf("Densidade Populacional: Carta 1 venceu (%d)\n", resultadoDensidadePopulacional);
   printf("PIB per Capta: Carta 1 venceu (%d)\n", resultadoPibPerCapta);
   printf("Super Poder: Carta 1 venceu (%d)\n", resultadoSuper);
-
+  */
 return 0;
 }
